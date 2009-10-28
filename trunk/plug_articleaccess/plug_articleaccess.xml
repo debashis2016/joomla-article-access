@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Article Access Plugin</name>
+	<author>Fiji Web Design</author>
+	<creationDate>Oct 28, 2009</creationDate>
+	<copyright>(C) 2007 Fiji Web Design. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>gabe@fijiwebdesign.com</authorEmail>
+	<authorUrl>www.fijiwebdsign.com</authorUrl>
+	<version>0.1</version>
+	<description>
+	<![CDATA[
+	<p>
+	Allows different parts of aricles to be viewed by different users based on their usertype.<br />
+	To make a section of an article viewable only by a certain usergroup, add {access view=usertype} {/access} around it. <br />
+	</p>
+	
+	<h3>For Single usertypes</h3>
+	<p>
+	Some content for everyone to see. <br />
+	
+	{access view=guest}Some content for guests{/access} <br />
+	{access view=registered}Some content only for registered users{/access} <br />
+	{access view=admin}Some content only for admins{/access} <br />
+	{access view=superadmin}Some content only for super admins{/access} <br />
+	
+	</p>
+	<p>For multiple usertypes</p>
+	<p>
+	Some content for everyone to see. <br />
+	{access view=guest}Some content for guests{/access} <br />
+	{access view=registered,author,editor,publisher}Some content only for registered and above{/access} <br />
+	</p>
+	
+	]]>
+	</description>
+	<files>
+		<filename plugin="plug_articleaccess">plug_articleaccess.php</filename>
+	</files>
+	<params />
+</install>
